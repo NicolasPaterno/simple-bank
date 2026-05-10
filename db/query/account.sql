@@ -14,10 +14,9 @@ WHERE id = @id LIMIT 1;
 
 -- name: GetAllAccounts :many
 SELECT * FROM accounts
-WHERE owner = $1
 ORDER BY id
-LIMIT $2
-OFFSET $3;
+LIMIT $1
+OFFSET $2 ;
 
 -- name: UpdateAccount :one
 UPDATE accounts
